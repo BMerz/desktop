@@ -71,6 +71,10 @@ public:
 
     ownCloudGui *gui() const;
 
+#ifdef Q_OS_MAC
+    bool event(QEvent *event) override;
+#endif
+
 public slots:
     // TODO: this should not be public
     void slotownCloudWizardDone(int);
@@ -84,11 +88,12 @@ public slots:
     /// Attempt to show() the tray icon again. Used if no systray was available initially.
     void tryTrayAgain();
 
+    void parseEditLocalFile(const QUrl &url);
+
 protected:
     void parseOptions(const QStringList &);
     void setupTranslations();
     void setupLogging();
-    bool event(QEvent *event) override;
 
 signals:
     void folderRemoved();

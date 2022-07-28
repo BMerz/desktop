@@ -75,19 +75,18 @@
         </array>
     </dict>
 </array>
-  <key>CFBundleURLTypes</key>
-  <array>
+
+<key>CFBundleURLTypes</key>
+<array>
     <dict>
-      <key>CFBundleTypeRole</key>
-      <string>Viewer</string>
-      <key>CFBundleURLName</key>
-      <string>@APPLICATION_REV_DOMAIN@</string>
-      <key>CFBundleURLSchemes</key>
-      <array>
-        <string>@APPLICATION_URI_HANDLER_SCHEME@</string>
-      </array>
+        <key>CFBundleURLName</key>
+        <string>@APPLICATION_NAME@ Edit Locally</string>
+        <key>CFBundleURLSchemes</key>
+        <array>
+            <string>@APPLICATION_URI_HANDLER_SCHEME@</string>
+        </array>
     </dict>
-  </array>
+</array>
 
 </dict>
 </plist>
