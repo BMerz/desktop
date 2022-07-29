@@ -750,7 +750,7 @@ void Application::parseEditLocalFileArgument()
     _editFileLocallyUrl.clear();
 }
 
-void Application::handleEditLocally(const QUrl &url)
+void Application::handleEditLocally(const QUrl &url) const
 {
     auto pathSplit = url.path().split('/', Qt::SkipEmptyParts);
 
