@@ -119,7 +119,7 @@ void Utility::registerUriHandlerForLocalEditing()
     const auto appImagePath = qEnvironmentVariable("APPIMAGE");
     const auto runningInsideAppImage = !appImagePath.isNull() && QFile::exists(appImagePath);
 
-    if (runningInsideAppImage) {
+    if (!runningInsideAppImage) {
         // only register x-scheme-handler if running inside appImage
         return;
     }
